@@ -2,12 +2,12 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('header');
   const navigate = useNavigate();
 
   const changeLanguageHandler = (lang: string) => {
     i18n.changeLanguage(lang).then(() => {
-      // To save route after rerender with i18
+      // In case nested routes there could be rerender and to save route after rerender with i18
       navigate(location.pathname);
     });
   };
@@ -16,12 +16,14 @@ export const Header = () => {
 
   return (
     <div>
-      Lang:{' '}
-      {allLanguages.map(item => (
-        <button key={item} disabled={item === selectedLanguage} onClick={() => changeLanguageHandler(item)}>
-          {item}
-        </button>
-      ))}
+      {t('lang')}:
+      <span style={{ marginLeft: '10px', gap: '5px', display: 'inline-flex' }}>
+        {allLanguages.map(item => (
+          <button key={item} disabled={item === selectedLanguage} onClick={() => changeLanguageHandler(item)}>
+            {item}
+          </button>
+        ))}
+      </span>
     </div>
   );
 };

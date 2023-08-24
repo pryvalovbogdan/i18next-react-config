@@ -1,5 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 const Notes = () => {
-  return <div>Notes</div>;
+  const { t } = useTranslation();
+
+  return <div>{t('notes')}</div>;
 };
 
 export default Notes;

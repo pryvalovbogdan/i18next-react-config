@@ -1,3 +1,5 @@
 {
-  "someTranslatableText": "[ES] Some translatable text"
+  "notes": "[ES] Notes",
+  "countIs": "[ES] count is {{count}}",
+  "react": "[ES] React"
 }
