@@ -1,5 +1,5 @@
 {
   "notes": "Notes",
-  "countIs": "count is {{count}}",
+  "count": "count is {{count}}",
   "react": "React"
 }
