@@ -19,10 +19,20 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "@i18n/*": [
+        "i18n/*"
+      ],
+      "@jestUtils/*": [
+        "src/jestUtils/*"
+      ]
+    }
   },
   "include": [
     "src"
   ],
-  "references": [{ "path": "./tsconfig.node.json"}]
+  "references": [{ "path": "./tsconfig.node.json"}],
+  "types": ["@types/jest"]
 }
