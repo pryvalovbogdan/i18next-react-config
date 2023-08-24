@@ -16,7 +16,7 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
     },
-    ns: ['main'],
+    ns: ['main', 'header'],
   });
 
 export default i18n;
