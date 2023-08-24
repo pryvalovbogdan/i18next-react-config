@@ -1,6 +1,10 @@
 export default {
   preset: 'ts-jest',
   displayName: 'i18next-react',
+  moduleNameMapper: {
+    '^@i18n/(.*)$': '<rootDir>/i18n/$1',
+    '^@jestUtils/(.*)$': '<rootDir>/src/jestUtils/$1',
+  },
   transformIgnorePatterns: ['/node_modules/(?!(@testing-library)/)', '/node_modules/@testing-library'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
