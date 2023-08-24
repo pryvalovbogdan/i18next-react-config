@@ -1,4 +1,4 @@
-import { renderWithProviders } from '../../../utils/testsUtils.tsx';
+import { renderWithProviders } from '../../../jestUtils/renderWithProviders.tsx';
 
 import { Header } from '../index.tsx';
 

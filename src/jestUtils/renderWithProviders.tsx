@@ -5,7 +5,7 @@ import { I18nextProvider } from 'react-i18next';
 import { render } from '@testing-library/react';
 import type { RenderOptions } from '@testing-library/react';
 
-import i18next from '../../i18n/i18next.ts';
+import i18next from './i18nextJest.ts';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   route?: string;
@@ -25,7 +25,5 @@ function renderWithProviders(
 
   return { ...render(component, { wrapper: Wrapper, ...renderOptions }) };
 }
-
-export * from '@testing-library/react';
 
 export { renderWithProviders };

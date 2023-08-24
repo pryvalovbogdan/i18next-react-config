@@ -4,7 +4,7 @@ export default {
   transformIgnorePatterns: ['/node_modules/(?!(@testing-library)/)', '/node_modules/@testing-library'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['./src/utils/setupTests.ts'],
+  setupFilesAfterEnv: ['./src/jestUtils/setupTests.ts'],
   coverageDirectory: 'coverage',
   transform: {
     '^.+\\.(ts|tsx)$': [
