@@ -32,7 +32,9 @@
     }
   },
   "include": [
-    "src"
+    "src",
+    "src/**/*.ts",
+    "*.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json"}],
   "types": ["@types/jest"]

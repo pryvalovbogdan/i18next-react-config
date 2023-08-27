@@ -7,18 +7,20 @@ import headerDe from '@i18n/locales/de/header.json';
 
 import { configI18n } from '@i18n/config.ts';
 
+export const resources = {
+  en: {
+    main,
+    header,
+  },
+  de: {
+    main: mainDe,
+    header: headerDe,
+  },
+};
+
 i18n.init({
   ...configI18n,
-  resources: {
-    en: {
-      main,
-      header,
-    },
-    de: {
-      main: mainDe,
-      header: headerDe,
-    },
-  },
+  resources,
 });
 
 export default i18n;
