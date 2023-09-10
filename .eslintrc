@@ -13,8 +13,8 @@
     "@typescript-eslint",
     "react",
     "react-hooks",
-    "custom-rule",
-    "my-rule"
+    "no-deprecated",
+    "group-imports"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": 1,
@@ -25,13 +25,12 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [0, { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
     "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-var-requires": 1,
     "react/react-in-jsx-scope": 0,
-    "custom-rule/no-old-method": 2,
-    "my-rule/new-line-before": 2,
-    "my-rule/new-line-after": 2,
+    "no-deprecated/no-deprecated-method": 2,
+    "group-imports/new-line-import-group": 2,
 
-
-             // Prettier configuration
+    // Prettier configuration
     "prettier/prettier": ["error", {
       "jsxBracketSameLine": false,  // Put the > of a multi-line JSX element at the end of the last line instead of being alone on the next line
       "jsxSingleQuote": true,       // Use single quotes instead of double quotes in JSX

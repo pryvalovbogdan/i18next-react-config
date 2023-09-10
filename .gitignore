@@ -92,7 +92,7 @@ out
 dist
 
 **/**/cjs/**
-plugins/my-rule/cjs
+plugins/group-imports/cjs
 
 # Gatsby files
 .cache/
