@@ -17,7 +17,7 @@ module.exports = {
               name: 'deprecatedMethod',
             },
             fix(fixer) {
-              return [fixer.replaceTextRange([node.start, node.end], 'newMethod')];
+              return fixer.replaceText(node, 'newMethod');
             },
           });
         }

@@ -16,7 +16,6 @@
   },
   "scripts": {
     "build": "yarn tsc -b",
-    "builds": "tsdx build",
     "test": "vitest"
   }
 }
