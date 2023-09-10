@@ -7,6 +7,10 @@ import { Header } from './components/header';
 const Main = lazy(() => import('./modules/main'));
 const Notes = lazy(() => import('./modules/notes'));
 
+const deprecatedMethod = () => {};
+
+deprecatedMethod();
+
 function App() {
   return (
     <>
