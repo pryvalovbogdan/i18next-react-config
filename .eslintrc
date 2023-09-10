@@ -12,7 +12,9 @@
   "plugins": [
     "@typescript-eslint",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "custom-rule",
+    "my-rule"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": 1,
@@ -24,6 +26,9 @@
     "@typescript-eslint/no-unused-vars": [0, { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
     "@typescript-eslint/no-empty-function": 0,
     "react/react-in-jsx-scope": 0,
+    "custom-rule/no-old-method": 2,
+    "my-rule/new-line-before": 2,
+    "my-rule/new-line-after": 2,
 
 
              // Prettier configuration
