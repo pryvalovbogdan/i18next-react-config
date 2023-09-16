@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
 import { ButtonWithTranslate } from '../../components/buttonWithTranslate';
 
 const Main = () => {
   const [count, setCount] = useState(0);
+
   const { t } = useTranslation();
 
   return (
