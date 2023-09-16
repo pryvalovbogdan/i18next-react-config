@@ -9,7 +9,6 @@ function basicStateReducer<S>(state: S, action: BasicStateAction<S>): S {
 export function useStateCustom<S>(_initialState: (() => S) | S): [S, Dispatch<BasicStateAction<S>>] {
   return useReducer(
     basicStateReducer,
-    // useReducer has a special case to support lazy useState initializers
     _initialState,
   );
 }

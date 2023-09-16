@@ -2,23 +2,8 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { useReducerData, useStateCustom } from '../../hooks/useStateCustom.ts';
 import { ButtonWithTranslate } from '../../components/buttonWithTranslate';
-
-interface IData {
-  id: number;
-  number: number;
-}
-
-function generateData() {
-  const data: IData[] = [];
-
-  for (let i = 0; i < 50; i++) {
-    data.push({
-      id: i,
-      number: i,
-    });
-  }
-  return data;
-}
+import { IData } from './types.ts';
+import { generateData } from './utils.ts';
 
 const Hook = () => {
   const [customCount, setCustomCount] = useStateCustom(1);
