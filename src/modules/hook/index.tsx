@@ -1,9 +1,10 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 
-import { useReducerData, useStateCustom } from '../../hooks/useStateCustom.ts';
+import { useStateCustom } from '../../hooks/useStateCustom.ts';
 import { ButtonWithTranslate } from '../../components/buttonWithTranslate';
 import { IData } from './types.ts';
 import { generateData } from './utils.ts';
+import { useReducerData } from '../../hooks/useReducerData.ts';
 
 const Hook = () => {
   const [customCount, setCustomCount] = useStateCustom(1);

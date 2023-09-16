@@ -7,23 +7,5 @@ function basicStateReducer<S>(state: S, action: BasicStateAction<S>): S {
 }
 
 export function useStateCustom<S>(_initialState: (() => S) | S): [S, Dispatch<BasicStateAction<S>>] {
-  return useReducer(
-    basicStateReducer,
-    _initialState,
-  );
-}
-
-type Action = { type: 'increase' };
-
-export function reducer(state: number, action: Action) {
-  switch (action.type) {
-    case 'increase':
-      return state + 1;
-    default:
-      return state;
-  }
-}
-
-export function useReducerData() {
-  return useReducer(reducer, 0);
+  return useReducer(basicStateReducer, _initialState);
 }
