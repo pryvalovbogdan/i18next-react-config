@@ -1,0 +1,28 @@
+body {
+    background-color: #242424!important;
+    color: rgba(255, 255, 255, 0.87)!important;
+}
+
+button {
+    border-radius: 8px!important;
+    border: 1px solid transparent!important;
+    padding: 0.6em 1.2em!important;
+    font-size: 1em!important;
+    font-weight: 500!important;
+    font-family: inherit!important;
+    background-color: #1a1a1a!important;
+    cursor: pointer!important;
+    transition: border-color 0.25s !important;
+    color: rgba(255, 255, 255, 0.87)!important;
+}
+
+button:hover {
+    border-color: #646cff!important;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color!important;
+}
+button:disabled {
+   opacity: 0.5!important;
+}

@@ -51,8 +51,8 @@ app.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    if (!(email && password)) {
-      res.status(400).send('All inputs are required');
+    if (!email || !password) {
+      res.status(400).send({ error: 'All inputs are required' });
     }
     const user = await User.findOne({ email });
 
@@ -65,7 +65,7 @@ app.post('/login', async (req, res) => {
 
       res.status(200).json(user);
     }
-    res.status(400).send('Invalid Credentials');
+    res.status(400).send({ error: 'Invalid Credentials' });
   } catch (err) {
     console.log(err);
   }
