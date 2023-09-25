@@ -14,7 +14,11 @@
     "e2e": "playwright test --config=playwright.config.ts"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@types/es6-promise": "^3.3.0",
+    "framer-motion": "^10.16.4",
     "i18next": "^23.4.5",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-resources-to-backend": "^1.1.4",
