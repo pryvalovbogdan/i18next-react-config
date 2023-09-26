@@ -11,7 +11,9 @@
     "test": "jest --coverage",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "e2e": "playwright test --config=playwright.config.ts"
+    "e2e": "playwright test --config=playwright.config.ts",
+    "server": "cd server && yarn dev",
+    "test:prerun": "yarn server && yarn dev"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
