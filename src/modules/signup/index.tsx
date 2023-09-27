@@ -46,15 +46,16 @@ const SignUp = () => {
         last_name: lastName,
       });
 
-      console.log('data', data);
-
       toast({
-        title: 'You have been registred',
+        title: 'You have been registered',
         status: 'success',
         duration: 3000,
         isClosable: true,
         position: 'top',
       });
+
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', data);
 
       redirect('/');
     } catch (data: any) {
