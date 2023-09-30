@@ -1,4 +1,4 @@
-import { Authentication } from './preconditions/auth';
+import { Authentication } from '../preconditions/auth';
 
 import { test, expect } from '@playwright/test';
 

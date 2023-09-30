@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import { setLocalStorage } from './utils';
+import { setLocalStorage } from '../utils';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');

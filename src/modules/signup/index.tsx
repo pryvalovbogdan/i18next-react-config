@@ -24,6 +24,7 @@ import '../login/base.css';
 
 import axios from 'axios';
 import { redirect } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -33,6 +34,7 @@ const SignUp = () => {
   const [firstName, setFirstName] = useState<string>('');
   const [lastName, setLastName] = useState<string>('');
 
+  const { t } = useTranslation();
   const toast = useToast();
 
   const signUpHandle = async () => {
@@ -47,7 +49,7 @@ const SignUp = () => {
       });
 
       toast({
-        title: 'You have been registered',
+        title: t('youHaveBeenRegistered'),
         status: 'success',
         duration: 3000,
         isClosable: true,
@@ -93,7 +95,7 @@ const SignUp = () => {
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
             <Heading fontSize={'4xl'} textAlign={'center'}>
-              Sign up
+              {t('signUp')}
             </Heading>
           </Stack>
           <Box rounded={'lg'} bg={'gray.700'} boxShadow={'lg'} p={8}>
@@ -101,7 +103,7 @@ const SignUp = () => {
               <HStack>
                 <Box>
                   <FormControl id='firstName'>
-                    <FormLabel>First Name</FormLabel>
+                    <FormLabel>{t('firstName')}</FormLabel>
                     <Input
                       type='text'
                       value={firstName}
@@ -111,7 +113,7 @@ const SignUp = () => {
                 </Box>
                 <Box>
                   <FormControl id='lastName'>
-                    <FormLabel>Last Name</FormLabel>
+                    <FormLabel>{t('lastName')}</FormLabel>
                     <Input
                       type='text'
                       value={lastName}
@@ -121,7 +123,7 @@ const SignUp = () => {
                 </Box>
               </HStack>
               <FormControl id='email' isRequired>
-                <FormLabel>Email address</FormLabel>
+                <FormLabel>{t('emailAddress')}</FormLabel>
                 <Input
                   type='email'
                   value={email}
@@ -129,7 +131,7 @@ const SignUp = () => {
                 />
               </FormControl>
               <FormControl id='password' isRequired>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>{t('password')}</FormLabel>
                 <InputGroup>
                   <Input
                     type={showPassword ? 'text' : 'password'}
@@ -154,12 +156,15 @@ const SignUp = () => {
                   }}
                   onClick={signUpHandle}
                 >
-                  Sign up
+                  {t('signUp')}
                 </Button>
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
-                  Already a user? <Link color={'blue.400'}>Login</Link>
+                  Already a user?{' '}
+                  <Link color={'blue.400'} href={'/login'}>
+                    {t('login')}
+                  </Link>
                 </Text>
               </Stack>
             </Stack>
