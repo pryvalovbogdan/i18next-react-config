@@ -1,5 +1,12 @@
 {
   "notes": "[DE] Notes",
   "countIs": "[DE] count is {{count}}",
-  "react": "[DE] React"
+  "react": "[DE] React",
+  "signUp": "[DE] Sign up",
+  "youHaveBeenRegistered": "[DE] You have been registered",
+  "firstName": "[DE] First Name",
+  "lastName": "[DE] Last Name",
+  "emailAddress": "[DE] Email address",
+  "password": "[DE] Password",
+  "login": "[DE] Login"
 }

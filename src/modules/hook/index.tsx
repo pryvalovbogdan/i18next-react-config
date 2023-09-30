@@ -35,7 +35,7 @@ const Hook = () => {
           handle={() => {
             dispatch({ type: 'increase' });
           }}
-          i18Value={customCount}
+          i18Value={state}
         />
       </div>
     </div>

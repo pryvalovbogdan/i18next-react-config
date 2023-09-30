@@ -1,5 +1,5 @@
-import { Suspense, lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy, useEffect } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import './App.css';
 import { Header } from './components/header';
@@ -7,12 +7,20 @@ import { Header } from './components/header';
 const Main = lazy(() => import('./modules/main'));
 const Notes = lazy(() => import('./modules/notes'));
 const Hook = lazy(() => import('./modules/hook'));
-
-const deprecatedMethod = () => {};
-
-deprecatedMethod();
+const Login = lazy(() => import('./modules/login'));
+const SignUp = lazy(() => import('./modules/signup'));
 
 function App() {
+  const token = localStorage.getItem('token');
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!token) {
+      navigate('/login');
+    }
+  }, [token]);
+
   return (
     <>
       <Header />
@@ -22,7 +30,8 @@ function App() {
             <Route path='/' element={<Main />} />
             <Route path='notes' element={<Notes />} />
             <Route path='hook' element={<Hook />} />
-            <Route path='*' element={<Main />} />
+            <Route path='login' element={<Login />} />
+            <Route path='signup' element={<SignUp />} />
           </Routes>
         </Suspense>
       </main>
